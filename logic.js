@@ -85,7 +85,8 @@ document.getElementById("reset-btn").addEventListener("click", function () {
     location.reload();
 });
 
-
+const moveSound = new Audio('promote.mp3');
+const moveSoun = new Audio('mixkit-winning-a-coin-video-game-2069.wav');
 tog = 1
 
 document.querySelectorAll('.box').forEach(item => {
@@ -95,6 +96,7 @@ document.querySelectorAll('.box').forEach(item => {
 
         if (item.style.backgroundColor == 'greenyellow' && item.innerText.length == 0) {
             tog = tog + 1
+            moveSound.play();
         }
 
         else if (item.style.backgroundColor == 'greenyellow' && item.innerText.length !== 0) {
@@ -109,7 +111,7 @@ document.querySelectorAll('.box').forEach(item => {
                     coloring()
                     insertImage()
                     tog = tog + 1
-
+                    moveSoun.play();
                 }
             })
         }
